@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --medical-blue: #1e40af;
+    --medical-green: #0A8F6A;
+    --light-gray: #F9FAFB;
+    --ink: #111827;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--ink);
+    @apply transition-colors duration-300 font-sans antialiased selection:bg-emerald-600 selection:text-white;
+  }
+
+  .dark body {
+    background-color: #0B0F19;
+    color: #F3F4F6;
+  }
+}
+
+/* Custom Sleek Interface Glassmorphism & Accent Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  border-radius: 16px;
+}
+
+.dark .glass-card {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(55, 65, 81, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.accent-btn {
+  background-color: var(--medical-green);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.accent-btn:hover {
+  background-color: #087a5a;
+  box-shadow: 0 4px 12px rgba(10, 143, 106, 0.3);
+}
+
+.blue-btn {
+  background-color: var(--medical-blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.blue-btn:hover {
+  background-color: #1d3557;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.pill-tag {
+  background: rgba(10, 143, 106, 0.1);
+  color: var(--medical-green);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dark .pill-tag {
+  background: rgba(10, 143, 106, 0.25);
+  color: #34D399;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0A8F6A 0%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(135deg, #34D399 0%, #60A5FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #0A8F6A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #057A5A;
+}
