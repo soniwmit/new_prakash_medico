@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavPage } from './types';
+import { useTracker } from './hooks/useTracker';
 import { SeoHead } from './components/SeoHead';
 import { EmergencyBanner } from './components/EmergencyBanner';
 import { Header } from './components/Header';
@@ -19,6 +20,7 @@ import { FaqPage } from './pages/FaqPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<NavPage>('home');
+  useTracker(currentPage);
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     return localStorage.getItem('theme') === 'dark';
   });
