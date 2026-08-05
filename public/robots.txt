@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://new-prakash-medico.vercel.app/sitemap.xml
